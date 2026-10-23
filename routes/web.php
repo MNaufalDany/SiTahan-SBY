@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/simulasi/kondisi-awal', function () {
+    return view('simulasi.kondisi-awal');
 });
-
-Route::view('/landing', 'landing')->name('landing');

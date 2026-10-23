@@ -1,0 +1,5 @@
+/* Custom CSS tambahan jika diperlukan. Tailwind sudah menangani struktur utamanya. */
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}

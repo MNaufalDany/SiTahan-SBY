@@ -1,0 +1,4 @@
+/* Custom tambahan jika diperlukan untuk memperhalus transisi atau font rendering */
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}

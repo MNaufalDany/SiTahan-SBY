@@ -1,0 +1,307 @@
+
+/* =========================================
+   SiTahan SBY - Login Petugas Kelurahan
+   ========================================= */
+
+:root {
+    --primary: #193b6d;
+    --primary-dark: #102d51;
+    --background: #f3f6fa;
+    --white: #ffffff;
+    --border: #cbd5e1;
+    --text-main: #142f52;
+    --text-secondary: #64748b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0;
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Halaman utama */
+
+.login-page {
+    min-height: 100vh;
+    width: 100%;
+    padding: 34px 20px 40px;
+    background: var(--background);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* =========================================
+   BRAND / LOGO
+   ========================================= */
+
+.brand-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand-link {
+    display: flex;
+    align-items: center;
+    gap: 11px;
+    text-decoration: none;
+}
+
+.brand-icon {
+    width: 42px;
+    height: 42px;
+    background: var(--primary);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.brand-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2px;
+}
+
+.brand-name {
+    color: var(--primary);
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.5px;
+}
+
+.brand-tagline {
+    color: #64748b;
+    font-size: 9px;
+    line-height: 12px;
+    font-weight: 600;
+    white-space: nowrap;
+}
+
+/* =========================================
+   LOGIN CARD
+   ========================================= */
+
+.login-card {
+    width: 100%;
+    max-width: 410px;
+    margin-top: 70px;
+    padding: 38px;
+    border-radius: 15px;
+    background: var(--white);
+    border: 1px solid #d9e2ed;
+    box-shadow: 0 18px 45px rgba(29, 49, 75, 0.08);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Icon Shield */
+
+.login-icon-wrapper {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: #eaf1fa;
+    color: var(--primary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Judul */
+
+.login-heading {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-heading h1 {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 20px;
+    line-height: 32px;
+    font-weight: 400;
+    letter-spacing: -0.45px;
+}
+
+.login-heading p {
+    margin: 14px 0 0;
+    font-size: 10px;
+    color: var(--text-secondary);
+    line-height: 16px;
+    font-weight: 400;
+}
+
+/* =========================================
+   FORM
+   ========================================= */
+
+.login-form {
+    width: 100%;
+    margin-top: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 16px;
+    color: #334155;
+}
+
+.form-group input {
+    width: 100%;
+    height: 44px;
+    padding: 0 13px;
+
+    border-radius: 8px;
+    background: #fff;
+    border: 1px solid var(--border);
+
+    font-family: inherit;
+    color: #1e293b;
+    font-size: 15px;
+    font-weight: 400;
+
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input::placeholder {
+    color: #9299a4;
+    opacity: 1;
+}
+
+.form-group input:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px rgba(25, 59, 109, 0.10);
+}
+
+/* Pesan validasi */
+
+.login-message {
+    margin: -4px 0 0;
+    color: #b91c1c;
+    font-size: 11px;
+    line-height: 18px;
+}
+
+.login-message[hidden] {
+    display: none;
+}
+
+/* =========================================
+   LOGIN BUTTON
+   ========================================= */
+
+.login-button {
+    width: 100%;
+    height: 44px;
+    padding: 0 16px;
+
+    border: none;
+    border-radius: 8px;
+    background: var(--primary);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 9px;
+
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    box-shadow: 0 5px 14px rgba(22, 58, 107, 0.15);
+
+    transition: background 0.2s, transform 0.2s;
+}
+
+.login-button:hover {
+    background: var(--primary-dark);
+}
+
+.login-button:active {
+    transform: translateY(1px);
+}
+
+.login-button:focus-visible {
+    outline: 3px solid #93c5fd;
+    outline-offset: 3px;
+}
+
+.login-button svg {
+    flex-shrink: 0;
+}
+
+/* =========================================
+   CARD FOOTER
+   ========================================= */
+
+.login-footer {
+    margin: 16px 0 0;
+    font-size: 8px;
+    line-height: 12px;
+    color: #64748b;
+    text-align: center;
+}
+
+/* =========================================
+   RESPONSIVE
+   ========================================= */
+
+@media (max-width: 480px) {
+
+    .login-page {
+        padding: 25px 16px 35px;
+    }
+
+    .login-card {
+        margin-top: 50px;
+        padding: 30px 22px;
+    }
+
+    .login-heading h1 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+
+    .login-heading p {
+        font-size: 10px;
+    }
+
+    .brand-name {
+        font-size: 15px;
+    }
+
+    .brand-tagline {
+        font-size: 8px;
+    }
+}

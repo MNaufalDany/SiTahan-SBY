@@ -7,3 +7,6 @@ Route::get('/', function () {
 });
 
 Route::view('/landing', 'landing')->name('landing');
+
+Route::view('/login-pemerintah', 'pemerintah.login')
+    ->name('pemerintah.login');
